@@ -26,7 +26,10 @@
 
 """
 # Streamlit dependencies
+from email.mime import image
+from pyparsing import col
 import streamlit as st
+from PIL import Image
 
 # Data handling dependencies
 import pandas as pd
@@ -45,7 +48,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview"]
+    page_options = ["Recommender System","Solution Overview","EDA","About Us","Contact Us"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -103,6 +106,21 @@ def main():
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
         st.write("Describe your winning approach on this page")
+    if page_selection == "EDA":
+        st.title("Our findings displayed graphically")
+    if page_selection == "MODEL":
+        st.title("The winning model") 
+
+   
+    if page_selection == "About Us":
+        st.title("More about the team:")
+    # Building out the "Contact Us" page
+    if page_selection == "Contact Us":
+       st.write("Contact Us")
+       st.subheader("Our Company")
+       st.markdown("We the JS3 company we will give you the best recommender")
+       image = Image.open('yy.jpg')
+       st.image(image,captions = 'My company')
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
