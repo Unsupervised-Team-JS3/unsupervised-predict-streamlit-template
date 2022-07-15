@@ -26,10 +26,13 @@
 
 """
 # Streamlit dependencies
+from email import message
 from email.mime import image
+from unicodedata import name
 from pyparsing import col
 import streamlit as st
 from PIL import Image
+
 
 # Data handling dependencies
 import pandas as pd
@@ -114,13 +117,49 @@ def main():
    
     if page_selection == "About Us":
         st.title("More about the team:")
+        st.subheader("Our values")
+        st.markdown("-Accountability and Collaboration")
+        st.write("-Continuous improvement and Innovative")
+        st.write("-Customer commitmentHonesty")
+      
+        st.subheader("Our Aim")
+        st.markdown("We plan on blah")
+        st.subheader("Our Vision")
+        st.markdown("A possibility is that JS3’s vision statement could include other variables that represent business performance, such as profitability and number of corporate partners. On the other hand, considering the broadness of JS3’s corporate mission statement, business diversification is expectable.The company will add more business ventures to its portfolio, in addition to original content production and on-demand digital content movie recommender that the mission statement encompasses")
     # Building out the "Contact Us" page
     if page_selection == "Contact Us":
-       st.write("Contact Us")
-       st.subheader("Our Company")
-       st.markdown("We the JS3 company we will give you the best recommender")
-       image = Image.open('yy.jpg')
-       st.image(image,captions = 'My company')
+       
+       st.title("JS3 company")
+       st.header("Message Us")
+       with st.form("form",clear_on_submit = True):
+        name = st.text_input("Enter full name")
+        email = st.text_input("Enter Email Address")
+        message = st.text_area("message")
+        submit = st.form_submit_button("Submit")
+        col1,col2,col3 = st.columns(3)
+        with col1:
+            st.subheader("Address")
+            img = Image.open("map.png")
+            st.image(img)
+            st.markdown("1078 Jubert str")
+            st.markdown("JHB")
+            st.markdown("2023")
+            with col2:
+                st.subheader("Phone")
+                st.markdown("Monday-Friday")
+                st.markdown("08h00-17h00 GMT+2")
+                st.markdown("(+27) 7895 68974")
+                st.markdown("(+27) 9852 25417")
+                st.markdown("Holidays")
+                st.markdown("08h00-15h00")
+                with col3:
+                    st.subheader("Email")
+                    st.markdown("andersonsmith@gmail.com")
+                    st.markdown("leratoM@gmail.com")
+       
+       #img5 = Image.open("Njabulo.jpg")
+       #st.markdown("We the JS3 company we will give you the best recommender")
+      
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
