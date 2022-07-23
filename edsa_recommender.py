@@ -145,25 +145,27 @@ def main():
         st.markdown("A possibility is that JS3’s vision statement could include other variables that represent business performance, such as profitability and number of corporate partners. On the other hand, considering the broadness of JS3’s corporate mission statement, business diversification is expectable.The company will add more business ventures to its portfolio, in addition to original content production and on-demand digital content movie recommender that the mission statement encompasses")
         st.subheader("Our Team")
         st.subheader("")
-        image = Image.open("./resources/imgs/Theo.jpeg")
-        st.image(image,'Theo Sdinani:Co-founder\n', width = 150)
-        image = Image.open("./resources/imgs/Menzi.jpeg")
-        st.image(image,'Menzi:Web Designer\n',width = 150) 
+        
+    
         col1,col2 = st.columns(2)
         #with col1:
  
         with col1:
             st.subheader("")
+            image = Image.open("./resources/imgs/Theo.jpeg")
+            st.image(image,'Theo Sdinani:CEO\n', width = 150)
             image = Image.open("./resources/imgs/Daniel.jpg")
             st.image(image,'Daniel Komape:Data Analyst\n', width=200)
             image = Image.open("./resources/imgs/Mokgadi.jpg")
-            st.image(image,'Mokgadi:Data scientist\n',width=200)
+            st.image(image,'Mokgadi Makgothoma:Data scientist\n',width=200)
         with col2:
             st.subheader("")
+            image = Image.open("./resources/imgs/Menzi.jpeg")
+            st.image(image,'Menzi Khathwane:Web Designer\n',width = 150) 
             image = Image.open("./resources/imgs/Success.jpg")
-            st.image(image,'Success:Software Developer\n', width=200)
+            st.image(image,'Success Mabelane:Software Developer\n', width=200)
             image = Image.open("./resources/imgs/Njabulo.jpg")
-            st.image(image,'Njabulo:UI/UX Designer\n', width=200)                               
+            st.image(image,'Njabulo Mudau:UI/UX Designer\n', width=200)                               
                        
     
      # Building out the "Contact Us" page
