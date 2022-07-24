@@ -142,7 +142,7 @@ def main():
         st.subheader("Our Aim")
         st.markdown("We promise steller service,our suppliers a valuable partner,our investors the prospects of sustained profitable growth,and our employees the allure of huge impact")
         st.subheader("Our Vision")
-        st.markdown("A possibility is that JS3’s vision statement could include other variables that represent business performance, such as profitability and number of corporate partners. On the other hand, considering the broadness of JS3’s corporate mission statement, business diversification is expectable.The company will add more business ventures to its portfolio, in addition to original content production and on-demand digital content movie recommender that the mission statement encompasses")
+        st.markdown("A possibility is that GR8’s vision statement could include other variables that represent business performance, such as profitability and number of corporate partners. On the other hand, considering the broadness of GR8’s corporate mission statement, business diversification is expectable.The company will add more business ventures to its portfolio, in addition to original content production and on-demand digital content movie recommender that the mission statement encompasses")
         st.subheader("Our Team")
         st.subheader("")
         
@@ -172,7 +172,7 @@ def main():
         st.subheader("")
     if page_selection == "Contact Us":
        
-       st.title("JS3 company")
+       st.title("GR8 company")
        
        st.header("Message Us")
        with st.form("form",clear_on_submit = True):
