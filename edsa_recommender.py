@@ -33,6 +33,7 @@ from unicodedata import name
 from pyparsing import col
 import streamlit as st
 from PIL import Image
+import pickle
 
 
 # Data handling dependencies
@@ -54,6 +55,7 @@ def main():
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
     page_options = ["Recommender System","Solution Overview","EDA","MODEL","About Us","Contact Us"]
+    model=pickle.load(open('resources/models/KNNWithMeans.pkl', 'rb'))
    
 
     # -------------------------------------------------------------------
@@ -128,8 +130,10 @@ def main():
         st.caption("Average rating over time")
         st.markdown("""Ïn the chart above we have another anomaly ,the year 1995 has an average of 5.0.This is possibly due to a very small
                 sample size or human error""")            
-    if page_selection == "MODEL":
+    if page_selection == "MODELS":
         st.title("Models we tried:") 
+        st.markdown("")
+       
 
    
     if page_selection == "About Us":
@@ -142,7 +146,7 @@ def main():
         st.subheader("Our Aim")
         st.markdown("We promise steller service,our suppliers a valuable partner,our investors the prospects of sustained profitable growth,and our employees the allure of huge impact")
         st.subheader("Our Vision")
-        st.markdown("A possibility is that GR8’s vision statement could include other variables that represent business performance, such as profitability and number of corporate partners. On the other hand, considering the broadness of GR8’s corporate mission statement, business diversification is expectable.The company will add more business ventures to its portfolio, in addition to original content production and on-demand digital content movie recommender that the mission statement encompasses")
+        st.markdown("A possibility is that GR8-AI Solutions’s vision statement could include other variables that represent business performance, such as profitability and number of corporate partners. On the other hand, considering the broadness of GR8-AI Solutions’s corporate mission statement, business diversification is expectable.The company will add more business ventures to its portfolio, in addition to original content production and on-demand digital content movie recommender that the mission statement encompasses")
         st.subheader("Our Team")
         st.subheader("")
         
@@ -160,7 +164,7 @@ def main():
             st.image(image,'Mokgadi Makgothoma:Data scientist\n',width=200)
         with col2:
             st.subheader("")
-            image = Image.open("./resources/imgs/Menzi.jpeg")
+            image = Image.open("./resources/imgs/Menzi.jpg")
             st.image(image,'Menzi Khathwane:Web Designer\n',width = 150) 
             image = Image.open("./resources/imgs/Success.jpg")
             st.image(image,'Success Mabelane:Software Developer\n', width=200)
@@ -172,7 +176,7 @@ def main():
         st.subheader("")
     if page_selection == "Contact Us":
        
-       st.title("GR8 company")
+       st.title("GR8-AI Solution")
        
        st.header("Message Us")
        with st.form("form",clear_on_submit = True):
