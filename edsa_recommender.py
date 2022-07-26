@@ -54,8 +54,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview","EDA","MODEL","About Us","Contact Us"]
-   
+    page_options = ["Recommender System","Solution Overview","EDA","About Us","Contact Us"]
    
 
     # -------------------------------------------------------------------
@@ -111,10 +110,19 @@ def main():
     # -------------------------------------------------------------------
 
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
+    #Our solution overview
     if page_selection == "Solution Overview":
+       
+        logo = Image.open('./resources/imgs/logo.jpeg')
+        st.sidebar.image(logo,use_column_width = True)
+        
+       
         st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+        st.subtitle("SVD-Singualar Value Decomposition")
+        #Our EDA page
     if page_selection == "EDA":
+        logo = Image.open('./resources/imgs/logo.jpeg')
+        st.sidebar.image(logo,use_column_width =True)
         st.title("Our findings displayed graphically")
         image = Image.open("./resources/imgs/bar.jpeg")
         st.image(image)
@@ -129,14 +137,15 @@ def main():
         st.image(image)
         st.caption("Average rating over time")
         st.markdown("""Ïn the chart above we have another anomaly ,the year 1995 has an average of 5.0.This is possibly due to a very small
-                sample size or human error""")            
-    if page_selection == "MODELS":
-        st.title("Models we tried:") 
-        st.markdown("")
+                sample size or human error""")  
+                     
+ 
        
 
    
     if page_selection == "About Us":
+        logo = Image.open('./resources/imgs/logo.jpeg')
+        st.sidebar.image(logo,use_column_width =True)
         st.title("More about the team:")
         st.subheader("Our values")
         st.markdown("-Accountability and Collaboration")
@@ -173,17 +182,17 @@ def main():
                        
     
      # Building out the "Contact Us" page
-        st.subheader("")
+       
     if page_selection == "Contact Us":
-       
-       st.title("GR8-AI Solution")
-       
-       st.header("Message Us")
-       with st.form("form",clear_on_submit = True):
-        name = st.text_input("Enter full name")
-        email = st.text_input("Enter Email Address")
-        message = st.text_area("message")
-        submit = st.form_submit_button("Submit")
+        logo = Image.open('./resources/imgs/logo.jpeg')
+        st.sidebar.image(logo,use_column_width =True)
+        st.title("GR8-AI Solution")
+        st.header("Message Us")
+        with st.form("form",clear_on_submit = True):
+         name = st.text_input("Enter full name")
+         email = st.text_input("Enter Email Address")
+         message = st.text_area("message")
+         submit = st.form_submit_button("Submit")
         col1,col2,col3 = st.columns(3)
         with col1:
             st.subheader("Address")
