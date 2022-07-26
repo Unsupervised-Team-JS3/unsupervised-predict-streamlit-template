@@ -112,13 +112,25 @@ def main():
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
     #Our solution overview
     if page_selection == "Solution Overview":
-       
+      
         logo = Image.open('./resources/imgs/logo.jpeg')
         st.sidebar.image(logo,use_column_width = True)
         
+        st.write("Describe yor winning approach")
        
-        st.title("Solution Overview")
-        st.subtitle("SVD-Singualar Value Decomposition")
+        st.subheader("**Collaborative Filtering (CF)**")
+        st.markdown("""This recommender engine was easy to implement in this work as it provides us with the recommendation of the 10 movies easily
+         as compared to the other approach. On the other hand, the CF is one of the most popular implemented recommender engines and it is based on
+         the assumption that the people were in agreement in the past and there is a high chance that they are in agreement in the future. An example
+          indicating what is meant by the statement about agreement is considering that a friend and the other friend have probably liked an identical
+          range of books in the past. Because the friend has now read new books that the other has not read there is a high chance that the other friend
+          will enjoy and probably like those same books. This logic describes what is known as `user-based` collaborative filtering which was implemented
+          in this application. """)
+        st.subheader("**Building the Recommender Sytem**")
+        st.markdown("""The recommender system application was built mainly for consumers to have an experience of watching movies that they are
+        likely to enjoy based on the three movies they have selected. Figure below shows a recommender engine from Netflix showing new release
+         movies. Ideally, more recommender systems look like the one from the figure below, however, the approach to building this one was somehow
+         different. """)
         #Our EDA page
     if page_selection == "EDA":
         logo = Image.open('./resources/imgs/logo.jpeg')
