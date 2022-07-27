@@ -129,9 +129,7 @@ def main():
           in this application. """)
         st.subheader("**Building the Recommender Sytem**")
         st.markdown("""The recommender system application was built mainly for consumers to have an experience of watching movies that they are
-        likely to enjoy based on the three movies they have selected. Figure below shows a recommender engine from Netflix showing new release
-         movies. Ideally, more recommender systems look like the one from the figure below, however, the approach to building this one was somehow
-         different. """)
+        likely to enjoy based on the three movies they have selected.  """)
         #Our EDA page
     if page_selection == "EDA":
         logo = Image.open('./resources/imgs/logo.jpeg')
