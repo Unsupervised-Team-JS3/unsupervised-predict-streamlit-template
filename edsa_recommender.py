@@ -112,6 +112,7 @@ def main():
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
     #Our solution overview
     if page_selection == "Solution Overview":
+        st.header("Solution Overview")
       
         logo = Image.open('./resources/imgs/logo.jpeg')
         st.sidebar.image(logo,use_column_width = True)
