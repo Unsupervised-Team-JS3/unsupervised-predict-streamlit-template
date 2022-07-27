@@ -119,7 +119,7 @@ def main():
         
         st.write("Describe yor winning approach")
        
-        st.subheader("**Collaborative Filtering (CF)**")
+        st.subheader("**Collaborative Based Filtering (CBF)**")
         st.markdown("""This recommender engine was easy to implement in this work as it provides us with the recommendation of the 10 movies easily
          as compared to the other approach. On the other hand, the CF is one of the most popular implemented recommender engines and it is based on
          the assumption that the people were in agreement in the past and there is a high chance that they are in agreement in the future. An example
