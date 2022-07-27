@@ -222,8 +222,8 @@ def main():
                 st.markdown("08h00-15h00")
                 with col3:
                     st.subheader("Email")
-                    st.markdown("andersonsmith@gmail.com")
-                    st.markdown("leratoM@gmail.com")
+                    st.markdown("andersonsmith@gr8AI.com")
+                    st.markdown("leratoM@gr8AI.com")
        
        #img5 = Image.open("Njabulo.jpg")
        #st.markdown("We the JS3 company we will give you the best recommender")
